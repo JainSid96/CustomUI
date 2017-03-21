@@ -1,9 +1,12 @@
 package com.example.mohitkumar.customviewapp;
 
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,16 +17,39 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.mohitkumar.customviewapp.Fragments.AllFragment;
+import com.example.mohitkumar.customviewapp.Fragments.FinalizedFragment;
+import com.example.mohitkumar.customviewapp.Fragments.SentFragment;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    ViewPagerAdapter viewPagerAdapter;
+    ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+        collapsingToolbarLayout.setTitle("Open Data:Collect");
         Toolbar toolbar = (Toolbar) collapsingToolbarLayout.findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+//        AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar);
+//        appBarLayout.setExpanded(true);
+//        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+//            boolean isShow = false;
+//            int scrollRange = -1;
+//
+//            @Override
+//            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+//                if (scrollRange == -1) {
+//                    scrollRange = appBarLayout.getTotalScrollRange();
+//                }
+//            }
+//        });
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -43,6 +69,15 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter.AddFragments(new AllFragment(),"ALL");
+        viewPagerAdapter.AddFragments(new FinalizedFragment(),"FINALIZED");
+        viewPagerAdapter.AddFragments(new SentFragment(),"SENT");
+        viewPager.setAdapter(viewPagerAdapter);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     @Override
