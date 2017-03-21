@@ -1,12 +1,16 @@
 package com.example.mohitkumar.customviewapp;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -34,12 +38,32 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHo
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         CardData cardData = arrayList.get(position);
-        //holder.textView1.setText(cardData.getNameMark());
+        holder.textView1.setText(cardData.getNameMark());
         holder.textView2.setText(cardData.getInfo());
         holder.textView3.setText(cardData.getTitle());
 //        String namemark = holder.textView2.getText().toString();
 //        holder.textView1.setText(namemark.charAt(0));
         int a =cardData.getN();
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder=new AlertDialog.Builder(context);
+                builder.setTitle("ODK Collect");
+                builder.setMessage("Do you want to delete the form?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).show();
+
+            }
+        });
         if(a==1) holder.textView4.setVisibility(View.VISIBLE);
     }
 

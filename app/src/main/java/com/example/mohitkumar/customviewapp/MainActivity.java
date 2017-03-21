@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Create a new Form from this button", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -118,9 +118,8 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+
+        if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
 

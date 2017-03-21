@@ -76,7 +76,7 @@ public class AllFragment extends Fragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.recycleR_id);
         int i=0;
         for(String abc:Title) {
-            CardData cardData = new CardData(Title[i],a[i],info[i],mark[i]);
+            CardData cardData = new CardData(abc,a[i],info[i],mark[i]);
             arrayList.add(cardData);
             i++;
         }
