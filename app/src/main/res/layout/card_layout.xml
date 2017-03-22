@@ -21,7 +21,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/roundshape"
-                android:backgroundTint="#ccfcc3"
+                android:backgroundTint="#d3d3d3"
                 android:text="T"
                 android:id="@+id/text_1"
                 android:textSize="35dp"
@@ -59,7 +59,7 @@
                    android:layout_height="20dp"
                    android:background="@drawable/corner"
                    android:layout_marginLeft="30dp"
-                   android:textColor="#fff"
+                   android:textColor="#000000"
                    android:text="FINALIZED"
                    android:gravity="center"
                    android:id="@+id/final_1"
@@ -69,7 +69,7 @@
                  <ImageView
                      android:layout_width="27dp"
                      android:layout_height="27dp"
-                     android:src="@drawable/trash"
+                     android:src="@drawable/delf"
                      android:id="@+id/del_form"
                      />
              </LinearLayout>
