@@ -15,16 +15,16 @@
             android:icon="@drawable/ic_all_inclusive_black_24dp"
             android:title="All" />
     </group>
-    <item android:title="Contact">
+    <item android:title="Utilities">
         <menu>
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_send_black_24dp"
                 android:title="Send" />
             <item
-                android:id="@+id/nav_setting"
-                android:icon="@drawable/ic_settings_black_24dp"
-                android:title="Settings" />
+                android:id="@+id/nav_stats"
+                android:icon="@drawable/ic_assessment_black_24dp"
+                android:title="Stats" />
             <item
                 android:id="@+id/nav_donate"
                 android:icon="@drawable/ic_monetization_on_black_24dp"
