@@ -48,8 +48,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHo
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder=new AlertDialog.Builder(context);
-                builder.setTitle("ODK Collect");
-                builder.setMessage("Do you want to delete the form?");
+                builder.setTitle("Form Deletion ALERT!");
+                builder.setMessage("Do you really want to delete this form?");
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

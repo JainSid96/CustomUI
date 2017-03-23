@@ -39,7 +39,7 @@ public class FinalizedFragment extends Fragment {
     ArrayList<CardData> arrayList= new ArrayList<CardData>();
 
     String[] Title = new String[] {"Bird Form","College Form","Market Form"};
-    String[] info = new String[]{"This is an example of College form.","A simple form to fill out all the college details",
+    String[] info = new String[]{"Form for Bird details","Form for college details",
             "Contains all basic kinds of information for the filling of the market form."};
     int[] a = new int[]{1,1,1};
     String[] mark = new String[]{"B","C","M"};
