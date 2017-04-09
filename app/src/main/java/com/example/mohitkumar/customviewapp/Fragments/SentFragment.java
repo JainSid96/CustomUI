@@ -39,7 +39,7 @@ public class SentFragment extends Fragment {
     ArrayList<CardData> arrayList= new ArrayList<CardData>();
 
     String[] Title = new String[] {"Bird Form","College Form"};
-    String[] info = new String[]{"bird details form.","Form for College details"};
+    String[] info = new String[]{"This is an example of College form.","A simple form to fill out all the college details"};
     int[] a = new int[]{1,1};
     String[] mark = new String[]{"B","C"};
 
