@@ -40,10 +40,11 @@ public class AllFragment extends Fragment {
     RecyclerView.LayoutManager layoutManager;
     ArrayList<CardData> arrayList= new ArrayList<CardData>();
 
-    String[] Title = new String[] {"Image Form","College Form","Bird Form","Market Form"};
-    String[] info = new String[]{"Form to upload images.","Form for College details","Form for bird details","Contains all basic kinds of information for the filling of the market form."};
+    String[] Title = new String[] {"Bird Form","Image Form","College Form","Market Form"};
+    String[] info = new String[]{"This is an example of College form.","The form facilitates to upload an image or multiple images.",
+            "A simple form to fill out all the college details","Contains all basic kinds of information for the filling of the market form."};
     int[] a = new int[]{1,0,1,1};
-    String[] mark = new String[]{"I","C","B","M"};
+    String[] mark = new String[]{"B","I","C","M"};
 
     public AllFragment() {
         // Required empty public constructor

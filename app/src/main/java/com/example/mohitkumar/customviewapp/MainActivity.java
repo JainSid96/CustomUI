@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbarLayout.setTitle("Collect Forms");
+        collapsingToolbarLayout.setTitle("Open Data:Collect");
         Toolbar toolbar = (Toolbar) collapsingToolbarLayout.findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "New Form Creation!", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Create a new Form from this button", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -73,9 +73,9 @@ public class MainActivity extends AppCompatActivity
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.AddFragments(new AllFragment(),"ALL"+"(4)");
-        viewPagerAdapter.AddFragments(new FinalizedFragment(),"FINALIZED"+"(3)");
-        viewPagerAdapter.AddFragments(new SentFragment(),"SENT"+"(2)");
+        viewPagerAdapter.AddFragments(new AllFragment(),"ALL");
+        viewPagerAdapter.AddFragments(new FinalizedFragment(),"FINALIZED");
+        viewPagerAdapter.AddFragments(new SentFragment(),"SENT");
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
@@ -105,10 +105,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_search) {
-            return true;
-        }
-        if (id == R.id.action_setting) {
+        if (id == R.id.action_settings) {
             return true;
         }
 
